@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    color:#26b1a1;
+}
+body{
+    color: #FFFFFF;
+    background-image: url(image/pexels-steve-13551577.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    border: 1px solid;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 80px 40px;
+    
+}
+h1{
+    margin-bottom: 30px;
+    text-align: center; 
+}
+.inputs{
+    color: #E2E8F0;
+    margin: 20px;
+}
+.inputs label{
+    display: block;
+}
+.inputs input{
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+.input__1{
+    margin-bottom: 30px;
+}
+.input__2{
+    margin-bottom: 30px;
+}
+svg{
+    display: inline;
+}
+.enter button{
+    display: block;
+    padding: 10px;
+    margin: auto;
+    width: 300px;
+    border-radius: 7px;
+    margin-bottom: 30px;
+    background-color: #219081;
+    border: none;
+    transition: 1s;
+    margin-top: 30px;
+}
+.enter button:hover{
+    background-color: #0f2f2b;
+    transform: scale(1.05);
+}
+.no__account{
+text-align: center;
+}
