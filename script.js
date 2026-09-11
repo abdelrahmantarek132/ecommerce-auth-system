@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const card = document.createElement("div");
                 card.classList.add("product-card");
                 card.innerHTML = `
-                    <img src="${p.image}" alt="${p.title}">
+                   <img src="${p.thumbnail || p.images?.[0]}" alt="${p.title}">
                     <h3>${p.title.slice(0, 25)}...</h3>
                     <p class="price">$${p.price}</p>
                 `;
