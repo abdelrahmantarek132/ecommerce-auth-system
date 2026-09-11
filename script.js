@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (user) {
                 localStorage.setItem("loggedInUser", JSON.stringify(user));
-                window.location.href = "home.html";
+                window.location.href = "index.html";
             } else {
                 alert("Wrong email or password");
             }
