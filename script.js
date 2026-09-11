@@ -125,16 +125,24 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        fetch("https://fakestoreapi.com/products")
-            .then(res => res.json())
-            .then(data => {
-                products = data;
-                renderProducts(products);
-            })
-            .catch(err => {
-                console.log(err);
-                productsContainer.innerHTML = "<p>Error loading data</p>";
-            });
+
+fetch("https://dummyjson.com/products")
+    .then(res => {
+        if (!res.ok) {
+            throw new Error("Failed to load products: " + res.status);
+        }
+        return res.json();
+    })
+    .then(data => {
+        products = data.products;
+        renderProducts(products);
+    })
+    .catch(err => {
+        console.error("Error loading products:", err);
+        productsContainer.innerHTML = "<p>Error loading data</p>";
+    });
+
+
         if (searchInput) {
             searchInput.addEventListener("input", function (e) {
                 const text = e.target.value.toLowerCase();
